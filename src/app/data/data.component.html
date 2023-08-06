@@ -1,0 +1,28 @@
+<!-- <p>data works!</p> -->
+<div class="header">
+    <h1> All Data</h1>
+</div>
+<div class="tab">
+    <table class="table" style="width: Auto;">
+        <tr>
+            <th>Name</th>
+            <th>Summary</th>
+            <th>Update</th>
+            <th>Delete</th>
+           
+        </tr>
+        <tr *ngFor="let data of namelist">
+            <td>{{data.Name}}</td>
+            <td>{{data.Summary}}</td>
+            <td><button class="btn" (click)="onupdt(data.Name)">Update</button></td>
+            <td><button class="btn" (click)="del(data.Name)">Delete</button> 
+            </td>            
+        </tr>
+        <br><br><br>
+        <div class="but1">
+            <button><a routerLink="/add-data">ADD NEW DATA</a>
+            </button>
+        </div>
+    </table>
+</div>
+    

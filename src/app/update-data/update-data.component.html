@@ -1,0 +1,19 @@
+<p>update-data works!</p>
+
+<div class="header">
+    <h1>Add New Data to Database</h1>
+</div>
+<br><br>
+<div class="formcontrol">
+ <form [formGroup]="empform" (ngSubmit)="updt(); empform.reset();">
+    <label for="">Name:  </label>
+    <input type="text" formControlName="Name" placeholder="Enter Name">
+    <span style="color:red;" *ngIf="empform.controls['Name'] && empform.controls['Name'] .invalid && empform.controls['Name'] .touched"> Required Field</span>
+     <br><br>
+    <label for="">Summary:</label>
+    <input type="text" formControlName="Summary" placeholder="Enter Summary">
+    <span style="color:red;" *ngIf="empform.controls['Summary']  && empform.controls['Summary'].invalid && empform.controls['Summary'].touched"> Required Field</span>
+    <br><br>
+    <button type="submit">UPDATE DATA</button>
+ </form>
+</div>
